@@ -13,34 +13,39 @@ public class Radio {
     }
 
     public void next() {
-        if (currentStation != 9)
+        if (currentStation != 9) {
             currentStation += 1;
-        else
+        } else {
             currentStation = 0;
+        }
     }
 
 
     public void prev() {
-        if (currentStation != 0)
+        if (currentStation != 0) {
             currentStation -= 1;
-        else
+        } else {
             currentStation = 9;
+        }
     }
 
     public void switchStation(int x) {
-        if (x >= 0 && x <= 9)
+        if (x >= 0 && x <= 9) {
             currentStation = x;
+        }
     }
 
     public void plus() {
-        if (currentVolume != 10)
+        if (currentVolume != 10) {
             currentVolume += 1;
+        }
     }
 
     public void minus() {
-        if (currentVolume != 0)
+        if (currentVolume != 0) {
             currentVolume -= 1;
-        else
+        } else {
             currentVolume = 0;
+        }
     }
 }
