@@ -12,6 +12,37 @@ public class RadioTest {
     }
 
     @Test
+    public void checkingCurrentStation() {
+        Radio radio = new Radio((int) 10, (int) 11);
+        assertEquals(10, radio.getCurrentStation());
+    }
+
+    @Test
+    public void settingCurrentStation() {
+        Radio radio = new Radio((short) 10);
+        assertEquals(10, radio.getStationsNumber());
+    }
+
+    @Test
+    public void checkingCurrentVolume() {
+        Radio radio = new Radio((int) 30);
+        assertEquals(30, radio.getCurrentVolume());
+    }
+
+    @Test
+    public void checkingStations() {
+        Radio radio = new Radio((short) 10);
+        assertEquals(10, radio.getCurrentStation());
+    }
+
+    @Test
+    public void checkingStationsNegative() {
+        Radio radio = new Radio((short) 21);
+        assertEquals(10, radio.getCurrentStation());
+
+    }
+
+    @Test
     public void next() {
         radio.next();
         int expected = 0;
