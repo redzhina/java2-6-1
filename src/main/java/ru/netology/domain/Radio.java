@@ -11,10 +11,6 @@ public class Radio {
         this.currentVolume = currentVolume;
     }
 
-    public void Radio(short stationsNumber) {
-        this.stationsNumber = stationsNumber;
-    }
-
     public Radio(short stationsNumber) {
         if (stationsNumber < 0) {
             return;

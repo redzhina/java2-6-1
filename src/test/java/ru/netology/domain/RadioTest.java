@@ -24,8 +24,26 @@ public class RadioTest {
     }
 
     @Test
+    public void settingCurrentStationNegative() {
+        Radio radio = new Radio((short) -13);
+        assertEquals(10, radio.getStationsNumber());
+    }
+
+    @Test
     public void checkingCurrentVolume() {
         Radio radio = new Radio((int) 30);
+        assertEquals(30, radio.getCurrentVolume());
+    }
+
+    @Test
+    public void checkingCurrentVolumeNegative() {
+        Radio radio = new Radio(101);
+        assertEquals(30, radio.getCurrentVolume());
+    }
+
+    @Test
+    public void checkingCurrentVolumeNegativeTwo() {
+        Radio radio = new Radio(-13);
         assertEquals(30, radio.getCurrentVolume());
     }
 
